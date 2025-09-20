@@ -30,16 +30,13 @@ This project demonstrates a complete ML pipeline from data preprocessing to mode
 ```
 house-price-prediction/
 ├── data/
-│   ├── raw/                 # Original datasets
+│   ├── raw/                 # Original datasets  
 │   └── processed/           # Cleaned and processed data
 ├── notebooks/
-│   ├── 01_data_exploration.ipynb    # EDA and data analysis
-│   ├── 02_feature_engineering.ipynb # Feature creation
-│   └── 03_model_training.ipynb      # Model development
+│   └── 01_data_exploration.ipynb    # EDA and data analysis
 ├── src/
-│   ├── data_preprocessing.py        # Data cleaning functions
-│   ├── model_training.py           # Model training pipeline
-│   └── prediction.py               # Prediction functions
+│   ├── data_loader.py              # Data loading functions
+│   └── model_training.py           # Model training pipeline
 ├── models/                 # Saved trained models
 ├── app.py                 # Flask web application
 ├── requirements.txt       # Python dependencies
@@ -87,9 +84,10 @@ jupyter notebook
 ## Model Performance
 
 - **Algorithm**: Random Forest Regressor
-- **MAE**: $15,430
-- **RMSE**: $22,180
-- **R² Score**: 0.87
+- **Dataset**: California Housing Dataset (sklearn)
+- **Training**: Achieves ~75-85% R² score on test data
+- **Features**: 8 input features (income, location, house age, etc.)
+- **Evaluation**: Includes MAE, RMSE, and feature importance analysis
 
 ## Dataset
 
